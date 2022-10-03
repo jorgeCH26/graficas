@@ -1,0 +1,35 @@
+.chartContainer {
+  width: 550px;
+  height: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap');
+
+.card{
+  height: 400px;
+  width: 620px;
+}
+
+@media (max-width: 1290px) {
+  .card{
+    height: 400px;
+    width: 100%;
+  }
+
+  .chartContainer {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .card{
+    height: 400px;
+    width: 100%;
+  }
+
+  .chartContainer {
+    width: 100%;
+    height: auto;
+  }
+}

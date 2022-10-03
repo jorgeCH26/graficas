@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600&display=swap');
+
+.fondo {
+  background-color: #e3e3e3;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  font-family: 'Open Sans', sans-serif;
+  background: #999;
+  font-weight: 700;
+}
+
+@media (max-width: 764px) {
+  .fondo {
+    background-color: #e3e3e3;
+    width: 100%;
+    bottom: -100%;
+    font-family: 'Open Sans', sans-serif;
+    background: #999;
+    font-weight: 700;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .fondo {
+    background-color: #e3e3e3;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    font-family: 'Open Sans', sans-serif;
+    background: #999;
+    font-weight: 700;
+  }
+}

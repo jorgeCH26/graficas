@@ -1,0 +1,41 @@
+<div class="container mt-10">
+  <div class="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
+    <div class="my-3.5">
+      <mat-card class="card">
+        <mat-card-content>
+          <div class="chartContainer">
+            <apx-chart
+              [series]="chartSeries"
+              [chart]="chartDetails"
+              [xaxis]="xaxis"
+              [dataLabels]="dataLabels"
+              [grid]="grid"
+              [stroke]="stroke"
+              [title]="chartTitle"
+              [tooltip]="tooltipLine"
+              [colors]="colorsLine"
+            ></apx-chart>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="my-3.5">
+      <mat-card class="card">
+        <mat-card-content>
+          <div class="chartContainer">
+            <apx-chart
+            [series]="seriesBar"
+            [chart]="chartBar"
+            [dataLabels]="dataLabelsBar"
+            [plotOptions]="plotOptionsBar"
+            [xaxis]="xaxisBar"
+            [title]="chartTitleBar"
+            [tooltip]="tooltipBar"
+            [colors]="colorsBar"
+          ></apx-chart>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

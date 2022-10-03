@@ -1,0 +1,59 @@
+<div class="container mt-10">
+  <mat-tab-group [selectedIndex]="selected.value"
+  (selectedIndexChange)="index($event)">
+    <mat-tab label="Crecimiento en 15 años">
+      <mat-card class="card mt-6">
+        <mat-card-content>
+          <div class="chartContainer">
+            <apx-chart
+              [series]="chartSeries"
+              [chart]="chartDetails"
+              [xaxis]="xaxis"
+              [dataLabels]="dataLabels"
+              [grid]="grid"
+              [stroke]="stroke"
+              [title]="chartTitle"
+              [tooltip]="tooltipLine"
+              [colors]="colorsLine"
+            ></apx-chart>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+
+    <mat-tab label="Perdidas en 15 años">
+      <mat-card class="card mt-6">
+        <mat-card-content>
+          <div class="chartContainer">
+            <apx-chart
+              [series]="seriesBar"
+              [chart]="chartBar"
+              [dataLabels]="dataLabelsBar"
+              [plotOptions]="plotOptionsBar"
+              [xaxis]="xaxisBar"
+              [title]="chartTitleBar"
+              [tooltip]="tooltipBar"
+              [colors]="colorsBar"
+            ></apx-chart>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+
+    <mat-tab label="Porcentaje de crecimiento y perdidas">
+      <mat-card class="card mt-6">
+        <mat-card-content>
+          <div class="chartContainer">
+            <apx-chart
+              [series]="series"
+              [chart]="chart"
+              [labels]="labels"
+              [responsive]="responsive"
+              [title]="chartTitleDount"
+            ></apx-chart>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+  </mat-tab-group>
+</div>

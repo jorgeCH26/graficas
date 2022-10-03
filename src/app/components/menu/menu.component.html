@@ -1,0 +1,74 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">{{section}}</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container
+    class="example-sidenav-container"
+    [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
+  >
+    <mat-sidenav
+      #snav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56"
+    >
+      <mat-nav-list>
+        <a
+          mat-list-item
+          routerLink="/"
+          class="font-sans font-bold hover:text-blue-600"
+          (click)="seccionCurrent('Dashboard')"
+        >
+          Dashboard &nbsp;&nbsp;
+          <mat-icon matSuffix>assessment</mat-icon>
+        </a>
+        <a
+          mat-list-item
+          routerLink="/portafolio"
+          class="font-sans font-bold hover:text-blue-600"
+          (click)="seccionCurrent('Valor del portafolio')"
+        >
+          Valor del portafolio &nbsp;&nbsp;
+          <mat-icon matSuffix>work</mat-icon>
+        </a>
+        <a
+          mat-list-item
+          routerLink="/saldos"
+          class="font-sans font-bold hover:text-blue-600"
+          (click)="seccionCurrent('Saldos')"
+        >
+          Saldos &nbsp;&nbsp;
+          <mat-icon matSuffix>attach_money</mat-icon>
+        </a>
+        <a
+          mat-list-item
+          routerLink="/acciones"
+          class="font-sans font-bold hover:text-blue-600"
+          (click)="seccionCurrent('Acciones')"
+        >
+          Acciones &nbsp;&nbsp;
+          <mat-icon matSuffix>bar_chart</mat-icon>
+        </a>
+        <a
+          mat-list-item
+          routerLink="/movimientos"
+          class="font-sans font-bold hover:text-blue-600"
+          (click)="seccionCurrent('Movimientos')"
+        >
+          Movimientos &nbsp;&nbsp;
+          <mat-icon matSuffix>compare_arrows</mat-icon>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="pos">
+      <router-outlet></router-outlet>
+      <div class="divSpace"></div>
+      <app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
